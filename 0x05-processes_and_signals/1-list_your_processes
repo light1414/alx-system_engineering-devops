@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# It prints a list of currently running processes.
+#   Displays every processes, for users, including those
+#+  which might not have a TTY.
+
+ps -auxf
