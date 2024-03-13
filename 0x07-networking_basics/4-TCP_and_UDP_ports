@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Prints listening ports. Adds listening sockets too
+# and + as the PID name of the program to which each socket belongs to.
