@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#lunch apache2 in docker
+start apache2 service
