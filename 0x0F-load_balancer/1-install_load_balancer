@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# script to install and configure HAproxy service
+
+sudo apt-get update
+sudo apt-get install -y haproxy
+echo "
+listen  hubservices
+        bind *:80
+        mode http
+        option httpclose
+        option forwardfor
+        balance roundrobin
+        server 426225-web-01 18.209.179.99:80 check
+        server 426225-web-02 34.239.254.186:80 check
+	" >> /etc/haproxy/haproxy.cfg
+sudo echo "ENABLED=1" > /etc/default/haproxy
+sudo service haproxy restart
