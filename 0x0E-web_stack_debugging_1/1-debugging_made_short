@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Script that corrects Nginx SERVER error listening Port
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+# nginx restart
+sudo service nginx restart
+pkill -o nginx
